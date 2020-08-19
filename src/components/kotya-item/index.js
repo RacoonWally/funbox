@@ -2,6 +2,7 @@ import React, {Component, Fragment} from "react";
 import {Link} from 'react-router-dom'
 
 import './index.scss'
+import kotya from '../../../public/images/kotya.png'
 
 
 class KotyaItem extends Component {
@@ -76,7 +77,7 @@ class KotyaItem extends Component {
                         <label>{quantity}<br/>{present}<br/>{happy}</label>
                     </div>
                     <div className="main-page-item__image">
-                        <img src={require("../../../public/images/kotya.png")} alt=""/>
+                        <img src={kotya} alt=""/>
                     </div>
                     <div className={`main-page-item__circle ${typeColorClassCircleBg}`}>
                         <div className="main-page-item__circle__text">

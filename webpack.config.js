@@ -23,7 +23,6 @@ module.exports = {
                         }
                     },
                 ],
-
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -50,6 +49,7 @@ module.exports = {
                     {loader: 'sass-loader'}
                 ]
             },
+
 
         ],
 
