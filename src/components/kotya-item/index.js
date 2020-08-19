@@ -76,7 +76,7 @@ class KotyaItem extends Component {
                         <label>{quantity}<br/>{present}<br/>{happy}</label>
                     </div>
                     <div className="main-page-item__image">
-                        <img src="../../../public/images/kotya.png"></img>
+                        <img src={require("../../../public/images/kotya.png")} alt=""/>
                     </div>
                     <div className={`main-page-item__circle ${typeColorClassCircleBg}`}>
                         <div className="main-page-item__circle__text">
