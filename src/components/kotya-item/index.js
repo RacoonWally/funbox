@@ -21,6 +21,26 @@ class KotyaItem extends Component {
         }
     };
 
+    selectedItemClassNames = (available) =>{
+        if (available){
+            if (this.state.isSelected) {
+                return "main-page-item__card-selected"
+            } else
+                return "";
+        } else {
+            return "main-page-item__card-selected"
+        }
+    };
+
+    unavalibleTextColor = (available) => {
+        if (!available) {
+            return "__yellow"
+        } else
+            return "";
+    };
+
+
+
     render() {
         const {id, textHeader, name, kind, quantity, present, happy = "", weight, description, lnk = false, color, available} = this.props.data;
         const splitedWeight = weight.split(" ");
@@ -33,6 +53,9 @@ class KotyaItem extends Component {
         const typeColorClass = `__${color}`;
         const typeColorClassCircleBg = `__${color}-bg`;
 
+        const cardSelected = this.selectedItemClassNames(available);
+        const unavalibleText = this.unavalibleTextColor(available);
+
 
         return (
             <div className="main-page-item">
@@ -41,39 +64,43 @@ class KotyaItem extends Component {
                          this.selectItem(id)
                      }}>
                     <div className="main-page-item__text">
-                        <p>{textHeader}</p>
+                        <label>{textHeader}</label>
                     </div>
                     <div className="main-page-item__header">
-                        <p>{name}</p>
+                        <label>{name}</label>
                     </div>
                     <div className="main-page-item__subheader">
-                        <p>{kind}</p>
+                        <label>{kind}</label>
                     </div>
                     <div className="main-page-item__text __small">
-                        <p>{quantity}<br/>{present}<br/>{happy}</p>
+                        <label>{quantity}<br/>{present}<br/>{happy}</label>
                     </div>
                     <div className="main-page-item__image">
                         <img src="../../../public/images/kotya.png"></img>
                     </div>
                     <div className={`main-page-item__circle ${typeColorClassCircleBg}`}>
                         <div className="main-page-item__circle__text">
-                            <p>{intWeight}<br/>{strWeight}</p>
+                            <label>{intWeight}<br/>{strWeight}</label>
                         </div>
                     </div>
                     <div className="main-page-item__hidden-triangle"></div>
                     <div className="main-page-item__border-top"></div>
                     <div className="main-page-item__border-left"></div>
+                    <div className={cardSelected}></div>
                 </div>
 
-                <div className="main-page-item_description">
-                    <p>{description}
+
+                <div className={`main-page-item_description ${unavalibleText}`} onClick={(e) => {
+                    this.selectItem(id)
+                }}>
+                    <label>{description}
                         <span>
                         <Link
                             className="main-page-item_description__link __blue"
                             to='https://rayfund.ru/'>
                             {textLink}
                         </Link>
-                    </span></p>
+                    </span></label>
                 </div>
             </div>
         )
