@@ -1,0 +1,61 @@
+
+.main-page {
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: url("../../../public/images/background.png");
+  color: white;
+  display: grid;
+
+  .main-page-container {
+
+    width: 100%;
+    display: grid;
+    justify-self: center;
+
+    .main-page__header-text {
+      align-self: end;
+      text-align: center;
+      font-family: "Exo2.0-Thin";
+      font-weight: 100;
+      font-size: 47px;
+      margin-bottom: 30px;
+    }
+
+    .main-page-kotya-container {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: -9%;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .main-page {
+
+    .main-page-container {
+
+      .main-page-kotya-container {
+        margin-left: -1%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .main-page {
+
+    .main-page-container {
+
+      .main-page-kotya-container {
+        margin-left: -1%;
+      }
+    }
+  }
+}
+
