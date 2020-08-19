@@ -12,8 +12,8 @@
     padding-left: 50px;
     padding-right: 65px;
     border-radius: 5px;
-    border-right: 4px solid #1698d9;
-    border-bottom: 4px solid #1698d9;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
     background: linear-gradient(135deg, transparent 43px, #f2f2f2 0) top left;
 
     .main-page-item__text {
@@ -67,7 +67,7 @@
       width: 23%;
       top: 28px;
       left: -15px;
-      border-bottom: 4px solid #1698d9;
+      border-bottom: 4px solid;
       transform: rotate(-45deg);
       border-radius: 5px;
     }
@@ -77,7 +77,7 @@
       width: 86%;
       height: 1px;
       background-color: transparent;
-      border-top: 4px solid #1698d9;
+      border-top: 4px solid;
       border-radius: 5px;
       top: 0;
       left: 58px;
@@ -88,9 +88,21 @@
       width: 1px;
       height: 90%;
       background-color: transparent;
-      border-left: 4px solid #1698d9;
+      border-left: 4px solid;
       top: 60px;
       left: 0;
+    }
+
+    .__purple-bg {
+      background-color: #d91667;
+    }
+
+    .__blue-bg {
+      background-color: #1698d9;
+    }
+
+    .__gray-bg {
+      background-color: #b3b3b3;
     }
   }
 
@@ -101,12 +113,28 @@
     text-align: center;
     font-size: 17px;
     color: white;
+    max-width: 409px;
+    word-break: normal;
 
     .main-page-item_description__link {
       text-decoration: none;
-      color: #1698d9;
-      border-bottom: 1px #1698d9 dashed;
+      border-bottom: 1px dashed;
     }
+  }
+
+  .__purple {
+    color: #d91667;
+    border-color: #d91667;
+  }
+
+  .__blue {
+    color: #1698d9;
+    border-color: #1698d9;
+  }
+
+  .__gray {
+    color: #b3b3b3;
+    border-color: #b3b3b3;
   }
 
 }
@@ -134,7 +162,12 @@
         left: -13px;
       }
     }
+
+    .main-page-item_description{
+      max-width: 349px;
+    }
   }
+
 }
 
 @media (max-width: 320px) {
@@ -150,19 +183,20 @@
         padding-top: 32px;
         padding-left: 25px;
         font-size: 15px;
+        word-break: normal;
       }
 
-      .main-page-item__header{
+      .main-page-item__header {
         padding-left: 25px;
         font-size: 50px;
       }
 
-      .main-page-item__subheader{
+      .main-page-item__subheader {
         padding-left: 25px;
         font-size: 25px;
       }
 
-      .__small{
+      .__small {
         padding-top: 5px;
         font-size: 15px;
       }
@@ -173,5 +207,15 @@
         left: -13px;
       }
     }
+
+    .main-page-item_description{
+      max-width: 313px;
+    }
   }
+
+
 }
+
+
+
+
